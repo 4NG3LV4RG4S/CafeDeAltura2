@@ -1,6 +1,11 @@
 ﻿@inherits LayoutComponentBase
 @inject NavigationManager Navigation
 
+<MudThemeProvider />
+<MudPopoverProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
 <div>
     <MudLayout>
         <MudDrawer @bind-open="DrawerOpen" Elevation="25" Anchor="Anchor.Left">
