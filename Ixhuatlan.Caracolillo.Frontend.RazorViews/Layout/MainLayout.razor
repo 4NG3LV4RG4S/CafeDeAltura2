@@ -1,0 +1,24 @@
+﻿@inherits LayoutComponentBase
+@inject NavigationManager Navigation
+
+<div>
+    <MudLayout>
+        <MudDrawer @bind-open="DrawerOpen" Elevation="25" Anchor="Anchor.Left">
+            <MudDrawerHeader>
+                <MudText Typo="Typo.h6">
+                    Caracolillo Café
+                </MudText>
+            </MudDrawerHeader>
+            <MudDrawerContainer>
+                <NavMenu/>
+            </MudDrawerContainer>
+        </MudDrawer>
+        
+        
+        <MudMainContent>
+            <article class="content px-4">
+                @Body
+            </article>
+        </MudMainContent>
+    </MudLayout>
+</div>
