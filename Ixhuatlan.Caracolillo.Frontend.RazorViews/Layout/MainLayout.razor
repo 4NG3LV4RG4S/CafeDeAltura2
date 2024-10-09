@@ -7,22 +7,30 @@
 <MudSnackbarProvider />
 
 <div>
-    <MudLayout>
-        <MudButton OnClick="OnExpandCollapseClick">@(_expanded ? "Collapse" : "Expand")</MudButton>
+    <MudLayout >
+        <MudAppBar Color="Color.Primary" Dense="true" Elevation="6">
+            <MudIconButton Icon="@Icons.Material.Filled.Menu" Edge="Edge.Start" OnClick="OnExpandCollapseClick">@(_expanded ? "Collapse" : "Expand")</MudIconButton>
+            <MudSpacer />
+            <MudImage 
+                Src="2024-10-09_10_45_49-removebg-preview.png"
+                Width="50"
+                Height="32"
+                Elevation="25" 
+                />
+            <MudText Typo="Typo.h6">
+                Caracolillo Café
+            </MudText>
+            <MudSpacer/>
+        </MudAppBar>
         <MudCollapse Expanded="_expanded">
             <MudDrawer @bind-Open="_expanded" Elevation="25" Anchor="Anchor.Left">
-                <MudDrawerHeader>
-                    <MudText Typo="Typo.h6">
-                        Caracolillo Café
-                    </MudText>
-                </MudDrawerHeader>
                 <MudDrawerContainer >
                     <NavMenu/>
                 </MudDrawerContainer>
             </MudDrawer>
         </MudCollapse>
-        
-        
+
+
         <MudMainContent>
             <article class="content px-4">
                 @Body
