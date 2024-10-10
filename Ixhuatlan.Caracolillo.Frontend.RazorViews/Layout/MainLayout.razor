@@ -8,8 +8,8 @@
 
 <div>
     <MudLayout >
-        <MudAppBar Color="Color.Primary" Dense="true" Elevation="6">
-            <MudIconButton Icon="@Icons.Material.Filled.Menu" Edge="Edge.Start" OnClick="OnExpandCollapseClick">@(_expanded ? "Collapse" : "Expand")</MudIconButton>
+        <MudAppBar Style="background-color: #023831" Dense="true" Elevation="6">
+            <MudIconButton Icon="@Icons.Material.Filled.Menu" Style="color: white" Edge="Edge.Start" OnClick="OnExpandCollapseClick">@(_expanded ? "Collapse" : "Expand")</MudIconButton>
             <MudSpacer />
             <MudImage 
                 Src="2024-10-09_10_45_49-removebg-preview.png"
@@ -25,7 +25,7 @@
         <MudCollapse Expanded="_expanded">
             <MudDrawer @bind-Open="_expanded" Elevation="25" Anchor="Anchor.Left">
                 <MudDrawerContainer >
-                    <NavMenu/>
+                    <NavMenu />
                 </MudDrawerContainer>
             </MudDrawer>
         </MudCollapse>
