@@ -1,6 +1,8 @@
 ﻿using Ixhuatlan.Caracolillo.Frontend.Entities.Options;
 using Ixhuatlan.Caracolillo.Frontend.Gateways;
 using Ixhuatlan.Caracolillo.Frontend.ViewModels;
+using Majorsoft.Blazor.Components.Common.JsInterop;
+using Majorsoft.Blazor.Components.Maps;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
@@ -39,6 +41,10 @@ public static class DependencyContainer
             config.SnackbarConfiguration.SnackbarVariant = Variant.Filled;
         });
 
+        services.AddMapExtensions();
+        services.AddJsInteropExtensions();
+        services.AddMapExtensions();
+        
         return services;
     }
 }
