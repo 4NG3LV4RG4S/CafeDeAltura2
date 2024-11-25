@@ -1,7 +1,6 @@
-﻿@using Majorsoft.Blazor.Components.Maps.Google
-@page "/"
+﻿@page "/"
 
-@* <div style="margin: 15px 0;">
+<div style="margin: 15px 0; padding: 15px;">
     <MudCarousel Class="mud-width-full" Style="height: 600px; margin: auto;" ShowArrows="true" ShowBullets="true" EnableSwipeGesture="true" AutoCycle="true" TData="object">
         <MudCarouselItem Transition="Transition.Fade" Style="padding-bottom: 35px;">
             <div class="d-flex justify-content-center align-items-center" style="height: 100%; width: 100%;">
@@ -33,39 +32,12 @@
             </div>
         </MudCarouselItem>
     </MudCarousel>
-</div> *@
+    
+    <MudCard Outlined="true" Elevation="25" Style="padding: 10px; background-color: #d3d3d3;">
+        <MudText Typo="Typo.h1">
+            Bienvenido a Caracolillo Café
+        </MudText>
+    </MudCard>
+    
 
-<GoogleMap @ref="_googleMap"
-           Height="800"
-           Width="1500"
-           ControlSize="@_jsMapControlSize"
-           Center="@_jsMapCenter"
-           AnimateCenterChange="@_jsMapAnimateCenterChange"
-           Zoom="@_jsMapZoomLevel"
-           ZoomControl="@_jsZoomControl"
-           ZoomControlOptionsPosition="GoogleMapControlPositions.RIGHT_BOTTOM"
-           MaxZoom="null"
-           MinZoom="null"
-           MapType="@_jsMapType"
-           Heading="@_jsHeading"
-           Tilt="@_jsTilt"
-           RotateControl="@_jsRotateControl"
-           RotateControlOptionsPosition="GoogleMapControlPositions.RIGHT_TOP"
-           ScaleControl="@_jsScaleControl"
-           StreetViewControl="@_jsStreetViewControl"
-           StreetViewControlOptionsPosition="GoogleMapControlPositions.TOP_CENTER"
-           ClickableIcons="@_jsClickableIcons"
-           DisableDefaultUI="@_jsDisableDefaultUI"
-           DisableDoubleClickZoom="@_jsDisableDoubleClickZoom"
-           DraggableCursor="crosshair"
-           DraggingCursor="move"
-           FullscreenControl="@_jsFullscreenControl"
-           FullscreenControlPositon="@_jsFullscreenControlPositon"
-           GestureHandling="@_jsGestureHandling"
-           KeyboardShortcuts="@_jsKeyboardShortcuts"
-           MapTypeControl="@_jsMapTypeControl"
-           MapTypeControlOptions="@_jsMapTypeControlOptions"
-           CenterCurrentLocationOnLoad="@_jsMapCenterCurrentLocation"
-           CustomControls="@_jsCustomControls"
-           Markers="@_jsMarkers"
-           ApiKey="@_googleMapsApiKey"/>
+</div>
